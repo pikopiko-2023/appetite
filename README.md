@@ -1,4 +1,4 @@
-# Boilerplate: Knex.js
+# Appetite
 
 ## Setup
 
