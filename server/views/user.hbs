@@ -1,10 +1,13 @@
-<div class="user">
-  <img class="logo" src="{{img}}" alt="{{name}}">
-  <h2>{{name}}</h2>
-  <div>Name: {{name}}</div>
-  <div>About: {{about}}</div>
-  <div>Email: {{email}}</div>
-</div>
+{{>header}}  
+  <div class="user">
+    <img class="logo" src="{{img}}" alt="{{name}}">
+    <h2>{{name}}</h2>
+      <div>Name: {{name}}</div>
+      <div>About: {{about}}</div>
+      <div>Email: {{email}}</div>
+  </div>
+{{>footer}}
+
 {{!-- done --}}
 
 {{!-- For testing only: will display all users from table as bullet points  --}}
