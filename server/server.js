@@ -5,7 +5,7 @@ import express from 'express'
 import handlebars from 'express-handlebars'
 
 import userRoutes from './routes/home.js'
-import reviewRoutes from './routes/reviews.js' 
+import reviewRoutes from './routes/reviews.js'
 import userGroupRoutes from './routes/users.js'
 import restaurantRoutes from './routes/restaurants.js'
 
@@ -27,6 +27,6 @@ server.use(express.urlencoded({ extended: true }))
 server.use('/', userRoutes)
 server.use('/users', userGroupRoutes)
 server.use('/restaurants', restaurantRoutes)
-server.use('/reviews', reviewRoutes)
+server.use('/restaurants', reviewRoutes)
 
 export default server

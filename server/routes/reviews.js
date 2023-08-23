@@ -10,8 +10,7 @@ router.get('/:id/reviews', async (req, res) => {
     const id = Number(req.params.id)
     const reviews = await db.getReviews(id)
     console.log(reviews)
-    res.render('review', {reviews})
-    
+    res.render('review', { reviews })
   } catch (err) {
     res.status(500).send('DATABASE ERROR: ' + err.message)
   }
