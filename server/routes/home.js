@@ -6,9 +6,9 @@ const router = express.Router()
 
 router.get('/', async (req, res) => {
   try {
-    const users = await db.getUsers()
-    res.render('index', { users: users })
-  } catch (err) {  
+    const restaurants = await db.getRestaurants()
+    res.render('index', { restaurants: restaurants })
+  } catch (err) {
     res.status(500).send('DATABASE ERROR: ' + err.message)
   }
 })
