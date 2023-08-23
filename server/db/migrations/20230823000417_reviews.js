@@ -1,10 +1,10 @@
 export async function up(knex) {
   await knex.schema.createTable('reviews', (table) => {
     table.increments('id').primary()
-    table.string('rating')
+    table.integer('rating')
     table.string('review')
-    table.string('user_id')
-    table.string('restaurant_id')
+    table.integer('user_id')
+    table.integer('restaurant_id')
   })
 }
 

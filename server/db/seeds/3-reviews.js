@@ -7,14 +7,14 @@ export async function seed(knex) {
       rating: 3,
       review:
         'I loved the food, the service was great, the dishes were just delicious, I will recommend it.',
-      user_id: 1,
+      user_id: 99901,
       restaurant_id: 77703,
     },
     {
       id: 88802,
       rating: 5,
       review: 'This is one of my best experience of a good restaurant',
-      user_id: 2,
+      user_id: 99902,
       restaurant_id: 77704,
     },
     {
@@ -22,7 +22,7 @@ export async function seed(knex) {
       rating: 1,
       review:
         'This restaurant has bad customer service. Owners allow in-laws to disrespect and mistreat customers while consuming.',
-      user_id: 3,
+      user_id: 99903,
       restaurant_id: 77701,
     },
     {
@@ -30,7 +30,14 @@ export async function seed(knex) {
       rating: 2,
       review:
         'For dinner, I went there with my girlfriend. At first sight, the place was a little messy and unclean.',
-      user_id: 3,
+      user_id: 99903,
+      restaurant_id: 77702,
+    },
+    {
+      id: 88805,
+      rating: 5,
+      review: 'I like it',
+      user_id: 99901,
       restaurant_id: 77702,
     },
   ])

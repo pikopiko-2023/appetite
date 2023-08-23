@@ -1,0 +1,17 @@
+<div class="reviews">
+  <h1>"Reviews"</h2>
+{{#each reviews}}
+  <img class="logo" src="{{restaurantImage}}" alt="{{restaurantName}}">
+  <li>
+    <p>{{userName}}</p>
+    <p>Reviewer | 26 Reviews | 7 photos</p>
+    <p></p>
+
+    <h2>{{restaurantName}}</h2>
+    <div>Rating: {{rating}}</div>
+    <p>7 hours age</p>
+    <p>{{review}}</p>
+  </li>
+{{/each}}
+</div>
+
