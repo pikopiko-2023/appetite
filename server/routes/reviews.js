@@ -39,41 +39,36 @@ router.post('/:id/addReview', async (req, res) => {
     const id = Number(req.params.id)
     const { name, email, rating, review } = req.body
     const allReviews = await db.getAllReviews()
-    const userId = await findUserId(name)
+
+    //we can add new user
+    const users = await db.getUsers()
+    const user = users.find((user) => user.name === name)
+    if (!user) return await addNewUser(users, name, email)
 
     const newReview = {
       id: allReviews.length + 88801,
       rating: rating,
       review: review,
-      user_id: userId,
+      user_id: user.id,
       restaurant_id: id,
     }
-
-    const newUser = {
-      id: userId,
-      name: name,
-      about: 'New reviewer',
-      email: email,
-      img: '/images/fake-user/new_user.png',
-    }
-
     await db.addNewReview(newReview)
-    await db.addUser(newUser)
+
     res.redirect(`reviews`)
   } catch (err) {
     res.status(500).send('DATABASE ERROR: ' + err.message)
   }
 })
 
-async function findUserId(name) {
-  const users = await db.getUsers()
-  const user = users.find((user) => user.name === name)
-
-  if (user) {
-    return user.id
-  } else {
-    return users.length + 99901
+async function addNewUser(users, name, email) {
+  const newUser = {
+    id: users.length + 99901,
+    name: name,
+    about: 'New reviewer',
+    email: email,
+    img: '/images/fake-user/new_user.png',
   }
+  await db.addUser(newUser)
 }
 
 export default router
