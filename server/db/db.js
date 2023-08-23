@@ -19,13 +19,13 @@ export async function getUser(id) {
 
 export async function getReviews(restaurant_id) {
   return await connection('reviews')
-    .join('restaurants', 'restaurants_id', 'reviews.restaurant_id')
+    .join('restaurants','restaurants.id', 'reviews.restaurant_id')
     .join('users', 'users.id', 'reviews.user_id')
-    .where(restaurant_id)
+    .where('restaurant_id', restaurant_id)
     .select(
       'reviews.id',
       'restaurants.name as restaurantName',
-
+      'restaurants.img as restaurantImage',
       'users.name as userName',
       'reviews.rating',
       'reviews.review'
