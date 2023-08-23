@@ -5,6 +5,10 @@ const environment = process.env.NODE_ENV || 'development'
 const config = knexfile[environment]
 export const connection = knex(config)
 
+export async function getRestaurants() {
+  return connection('restaurants').select('*')
+}
+
 export async function getUsers() {
   return connection('users').select()
 }
