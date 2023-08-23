@@ -1,8 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 
-body{
-  padding: 40px;
+* {
+margin: 0;
+padding: 0;
+
+}
+body {
   font-family: 'Heebo', sans-serif;
+  background-color: rgb(255, 239, 229);
+
+}
+
+/* header {
+  width: 70px;
+  height: 40px;
+} */
+.logo-container {
+  background: linear-gradient(to top left, #E8612F 5%, #EF8663 60%)
+}
+
+.appLogo  {
+  max-width: 35%;
+  max-height: 35%;
 }
 
 .logo{
@@ -10,4 +29,10 @@ body{
   width: 30vw;
   border: 1px solid black;
   box-shadow: 2px 2px 5px gray;
+}
+
+footer {
+  bottom: 0;
+  width: 100vw;
+  background-color: rgb(254, 238, 219);
 }
