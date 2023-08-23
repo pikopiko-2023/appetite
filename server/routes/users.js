@@ -6,9 +6,9 @@ const router = express.Router()
 
 router.get('/:id', async (req, res) => {
   try {
-    const restaurantId = parseInt(req.params.id)
-    const restaurant = await db.getRestaurant(restaurantId)
-    res.render('restaurant', restaurant)
+    const userId = parseInt(req.params.id)
+    const user = await db.getUser(userId)
+    res.render('user', user)
   } catch (err) {
     res.status(500).send('DATABASE ERROR: ' + err.message)
   }
@@ -16,11 +16,11 @@ router.get('/:id', async (req, res) => {
 
 export default router
 
-// * For testing only - to display all data from restaurants table
+// * For testing only - to display all data from users table
 // router.get('/', async (req, res) => {
 //   try {
-//     const restaurants = await db.getRestaurants()
-//     res.render('restaurant', { restaurants: restaurants })
+//     const users = await db.getUsers()
+//     res.render('user', { users: users })
 //   } catch (err) {
 //     res.status(500).send('DATABASE ERROR: ' + err.message)
 //   }
