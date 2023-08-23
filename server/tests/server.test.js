@@ -8,23 +8,33 @@ import { render } from './test-utils.js'
 vi.mock('../db/db.js')
 
 
-test('GET /', async () => {
-  vi.mocked(db.getUser).mockImplementation(async (id) => {
-    return { id: id, name: 'test user', email: 'test@user.nz' }
+test('Serves one of form from reviews page', async () => {
+  vi.mocked(db.getRestaurant).mockImplementation(async (id) => {
+    return{
+      id: id,
+      name: "Fork",
+      description: 'Good',
+      location: 'Library',
+      food_grade: 'B',
+      img: '/images/logos/forkNFictionDiner.png',
+      rating: 1
+    }
   })
-
-  vi.mocked(db.getUsers).mockImplementation(async () => {
-    return [
-      { id: 2, name: 'test user 2', email: 'test2@user.nz' },
-      { id: 4, name: 'test user 4', email: 'test4@user.nz' },
-    ]
+  vi.mocked(db.getReviews).mockImplementation(async (id) => {
+    return {
+      id: id,
+      userImage: '/images/fake-user/Anton_Ego.png',
+      userName: 'Anton Ego',
+      rating: 5,
+      review: 'I like it'
+    }
   })
-
-  const res = await request(server)
-    .get('/')
-   
+    
+  const res = await request(server).get('/restaurants/77702/reviews')
   expect(res.statusCode).toBe(200)
   const screen = render(res)
-  const firstLiText = screen.getByText('test user 2 (test2@user.nz)')
-  expect(firstLiText).toBeInTheDocument()
+  const heading = screen.getByRole('heading')
+  expect(heading.textContent).toMatchInlineSnapshot(`"Fork's reviews"`)
 })
+
+
