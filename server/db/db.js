@@ -20,17 +20,28 @@ export async function getUser(id) {
   return connection('users').where('id', id).first()
 }
 
+export async function getAllReviews() {
+  return await connection('reviews').select()
+}
+
 export async function getReviews(restaurant_id) {
   return await connection('reviews')
-    .join('restaurants','restaurants.id', 'reviews.restaurant_id')
+    .join('restaurants', 'restaurants.id', 'reviews.restaurant_id')
     .join('users', 'users.id', 'reviews.user_id')
     .where('restaurant_id', restaurant_id)
     .select(
       'reviews.id',
-      'restaurants.name as restaurantName',
-      'restaurants.img as restaurantImage',
+      'users.img as userImage',
       'users.name as userName',
       'reviews.rating',
       'reviews.review'
     )
+}
+
+export async function addNewReview(newReview) {
+  return await connection('reviews').insert(newReview)
+}
+
+export async function addUser(newUser) {
+  return await connection('users').insert(newUser)
 }
