@@ -15,7 +15,6 @@ export async function getRestaurant(id) {
 
 export async function getUsers() {
   return connection('users').select()
-}
 
 export async function getUser(id) {
   return connection('users').where('id', id).first()

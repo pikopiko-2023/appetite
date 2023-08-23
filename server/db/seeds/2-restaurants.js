@@ -11,6 +11,7 @@ export async function seed(knex) {
         'Serving up delicious food with a side of groan-worthy puns.',
       location: 'Punderland',
       food_grade: 'C',
+      img: '/images/logos/punderfulBites.png',
       rating: 0,
     },
     {
@@ -20,6 +21,7 @@ export async function seed(knex) {
         'Where culinary creativity meets imaginative storytelling on your plate.',
       location: 'Library Courtyard',
       food_grade: 'B',
+      img: '/images/logos/forkNFictionDiner.png',
       rating: 1,
     },
     {
@@ -29,6 +31,7 @@ export async function seed(knex) {
         'A quirky spot for both humans and their feline friends to enjoy unique dishes.',
       location: 'Cat Kingdom',
       food_grade: 'A',
+      img: '/images/logos/whiskeyLickersEatery.png',
       rating: 4,
     },
     {
@@ -37,6 +40,7 @@ export async function seed(knex) {
       description: 'Defying the ordinary with extraordinary nachos and more.',
       location: 'Mexico',
       food_grade: 'B',
+      img: '/images/logos/nachoAverageJoint.png',
       rating: 5,
     },
   ])
