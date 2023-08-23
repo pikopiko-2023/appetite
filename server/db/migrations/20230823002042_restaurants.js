@@ -9,6 +9,7 @@ export async function up(knex) {
     table.string('description')
     table.string('location')
     table.string('food_grade')
+    table.string('img')
     table.integer('rating')
   })
 }
