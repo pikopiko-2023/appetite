@@ -37,11 +37,11 @@ server.use('/restaurants', reviewRoutes)
 const headerPartial = await fs.readFile(
   Path.join(__dirname, 'views', 'partials', 'header.hbs')
 )
-console.log(headerPartial)
+
 const footerPartial = await fs.readFile(
   Path.join(__dirname, 'views', 'partials', 'header.hbs')
 )
-console.log(footerPartial)
+
 Handlebars.registerPartial('header', headerPartial)
 Handlebars.registerPartial('footer', footerPartial)
 
