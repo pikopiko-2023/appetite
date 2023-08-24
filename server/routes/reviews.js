@@ -10,9 +10,9 @@ router.get('/:id/reviews', async (req, res) => {
     const id = Number(req.params.id)
     const reviews = await db.getReviews(id)
     const restaurant = await db.getRestaurant(id)
-
     const viewReviews = {
       restaurant: restaurant,
+      rating: getStarIcons(restaurant.rating),
       reviews: reviews,
     }
     res.render('review', { viewReviews })
@@ -68,6 +68,10 @@ async function addNewUser(users, name, email) {
     img: '/images/fake-user/new_user.png',
   }
   await db.addUser(newUser)
+}
+
+function getStarIcons(rating) {
+  return '🌟'.repeat(rating)
 }
 
 export default router
