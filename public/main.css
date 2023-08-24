@@ -23,6 +23,10 @@ header {
   box-shadow: 2px 2px 5px gray;
 }
 
+.logo:hover {
+  border: 2px solid #dcb53f;
+}
+
 .logo-container {
   background: linear-gradient(to top left, #e8612f 5%, #ef8663 60%);
 }
