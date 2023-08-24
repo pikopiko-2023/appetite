@@ -11,9 +11,9 @@ header {
   place-content: center;
 }
 
-.appLogo  {
-  width: 550px;
-  height: 300px;
+.appLogo {
+  width: 210px;
+  height: 144px;
 }
 
 .logo {
@@ -23,12 +23,47 @@ header {
   box-shadow: 2px 2px 5px gray;
 }
 
+.logo-container {
+  background: linear-gradient(to top left, #e8612f 5%, #ef8663 60%);
+}
+
 footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #EE825D;
+  background-color: #ee825d;
   text-align: center;
+}
+
+/* ------ CSS for Navigation Bar ----- */
+.navbar {
+  width: 100%;
+  background-color: #ee825d;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ffde5c;
+}
+
+.active {
+  background-color: #fff4ee;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
 }
 
 /* ------CSS for Star rating------ */
@@ -53,7 +88,7 @@ footer {
 }
 
 .radio-label:before {
-  content: "★";
+  content: '★';
   display: inline-block;
   font-size: 32px;
 }
