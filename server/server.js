@@ -39,10 +39,15 @@ const headerPartial = await fs.readFile(
 )
 
 const footerPartial = await fs.readFile(
-  Path.join(__dirname, 'views', 'partials', 'header.hbs')
+  Path.join(__dirname, 'views', 'partials', 'footer.hbs')
+)
+
+const navigationPartial = await fs.readFile(
+  Path.join(__dirname, 'views', 'partials', 'navigation.hbs')
 )
 
 Handlebars.registerPartial('header', headerPartial)
 Handlebars.registerPartial('footer', footerPartial)
+Handlebars.registerPartial('navigation', navigationPartial)
 
 export default server
