@@ -12,8 +12,8 @@ header {
 }
 
 .appLogo {
-  width: 550px;
-  height: 300px;
+  width: 450px;
+  height: 250px;
 }
 
 .logo {
@@ -23,12 +23,27 @@ header {
   box-shadow: 2px 2px 5px gray;
 }
 
+.user-logo {
+  max-width: 450px;
+  padding: 20px;
+}
+
+.logos {
+  padding-left: 22.5%;
+  padding-right: 20%;
+}
+
 .logo:hover {
   border: 2px solid #dcb53f;
 }
 
 .logo-container {
-  background: linear-gradient(to top left, #e8612f 5%, #ef8663 60%);
+  background: linear-gradient(to bottom left, #ef8663 25%, #e8612f 80%);
+}
+
+.about-user {
+  padding: 20px;
+  width: 50%;
 }
 
 footer {
@@ -37,6 +52,10 @@ footer {
   height: 60px;
   background-color: #ee825d;
   text-align: center;
+}
+
+.footer-note {
+  padding: 20px;
 }
 
 /* ------ CSS for Navigation Bar ----- */

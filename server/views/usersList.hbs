@@ -2,8 +2,11 @@
 {{>navigation}}
 <h1>All Users:</h1>
 {{#each users}}
-  <img class="logo" src="{{img}}" alt="{{name}}"><h2>{{name}}  ----  <a href="users/{{id}}">>>View All Reviews</a></h2>
-  <div>About: {{about}}</div>
-  <div>Email: {{email}}</div>
+  <img class="user-logo" src="{{img}}" alt="{{name}}">
+  <div class="about-user">  
+    <h2>{{name}}  -  <a href="users/{{id}}">Users Reviews</a></h2>
+    <div>About: {{about}}</div>
+    <div>Email: {{email}}</div>
+  </div>
 {{/each}}
 {{>footer}}
