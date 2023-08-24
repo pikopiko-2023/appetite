@@ -1,5 +1,6 @@
 <div class="reviews">
   {{>header}}
+  {{>navigation}}
   <div>
     <img class="logo" src="{{viewReviews.restaurant.img}}" alt="{{viewReviews.restaurant.name}} image">
     <h2>{{viewReviews.restaurant.name}}'s reviews</h2>
@@ -10,7 +11,7 @@
   <div>
     <div>
     <img class="logo" src="{{userImage}}" alt="{{userName}}">
-    <h3>{{userName}}  <a href="/users/{{userId}}">>>View Profile</a></h3>
+    <h3>{{userName}}  <a href="/users/{{userId}}">View Profile</a></h3>
     <p>Rating: {{rating}}</p>
     <p>{{review}}</p>
     <div>
