@@ -1,18 +1,21 @@
-{{>header}}
-  <div class="reviews">
-    <h2>"Reviews"</h2>
-  {{#each reviews}}
-    <img class="logo" src="{{restaurantImage}}" alt="{{restaurantName}}">
-    <li>
-      <p>{{userName}}</p>
-      <p>Reviewer | 26 Reviews | 7 photos</p>
-      <p></p>
-
-      <h2>{{restaurantName}}</h2>
-      <div>Rating: {{rating}}</div>
-      <p>7 hours age</p>
-      <p>{{review}}</p>
-    </li>
-  {{/each}}
+{{header}}
+<div class="reviews">
+  <div>
+    <img class="logo" src="{{viewReviews.restaurant.img}}" alt="{{viewReviews.restaurant.name}} image">
+    <h2>{{viewReviews.restaurant.name}}'s reviews</h2>
+    <p>Total Rating : {{viewReviews.restaurant.rating}}<p>
+    <a class="" href="/restaurants/{{viewReviews.restaurant.id}}/addReview">add review</a>
   </div>
-{{>footer}}
+{{#each viewReviews.reviews}}
+  <div>
+    <div>
+    <img class="logo" src="{{userImage}}" alt="{{userName}}">
+    <p>{{userName}}</p>
+    <p>Reviewer | {{id}} Reviews | 7 photos </p>
+    <p>Rating: {{rating}}</p>
+    <p>{{review}}</p>
+    <div>
+  </div>
+{{/each}}
+</div>
+{{footer}}

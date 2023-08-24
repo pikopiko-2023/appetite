@@ -8,7 +8,6 @@ beforeAll(async () => {
   await db.connection.migrate.latest()
 })
 
-
 beforeEach(async () => {
   await db.connection.seed.run()
 })
@@ -18,17 +17,15 @@ afterAll(async () => {
 })
 
 test('getUsers gets all users', async () => {
-  // One for each letter of the alphabet!
-  const expected = 3
-  const users = await db.getUsers(testDb)
+  const expected = 1
+  const users = await db.getUsers()
   const actual = users.length
   expect(actual).toBe(expected)
 })
 
-test('getUser gets a single user', async () => {
-  const expected = 'test user 1'
-  const user = await db.getUser(99901, testDb)
-  const actual = user.name
-
+test('getReview gets a review', async () => {
+  const expected = 'bad customer service'
+  const reviews = await db.getReviews(77701, testDb)
+  const actual = reviews[0].review
   expect(actual).toBe(expected)
 })
