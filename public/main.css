@@ -12,8 +12,8 @@ header {
 }
 
 .appLogo {
-  width: 210px;
-  height: 144px;
+  width: 550px;
+  height: 300px;
 }
 
 .logo {
@@ -52,11 +52,7 @@ footer {
 }
 
 .navbar a:hover {
-  background-color: #ffde5c;
-}
-
-.active {
-  background-color: #fff4ee;
+  background-color: #e96536;
 }
 
 @media screen and (max-width: 500px) {
