@@ -14,10 +14,23 @@ export async function getRestaurant(id) {
 }
 
 export async function getUsers() {
-  return connection('users').select()
+  return connection('users').select('*')
 }
+
 export async function getUser(id) {
   return connection('users').where('id', id).first()
+}
+
+export async function getReviewsByUser(userId) {
+  return await connection('reviews')
+    .join('restaurants', 'restaurants.id', 'reviews.restaurant_id')
+    .where('reviews.user_id', userId)
+    .select(
+      'restaurants.img as restaurantImage',
+      'restaurants.name as restaurantName',
+      'reviews.rating',
+      'reviews.review'
+    )
 }
 
 export async function getAllReviews() {
@@ -33,6 +46,7 @@ export async function getReviews(restaurant_id) {
       'reviews.id',
       'users.img as userImage',
       'users.name as userName',
+      'users.id as userId',
       'reviews.rating',
       'reviews.review'
     )
