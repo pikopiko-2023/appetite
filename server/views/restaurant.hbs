@@ -1,12 +1,16 @@
-<div class="restaurant">
-  <img class="logo" src="{{img}}" alt="{{name}}">
-  <h2>{{name}}</h2>
-  <div>Name: {{name}}</div>
-  <div>Location: {{location}}</div>
-  <div>Description: {{description}}</div>
-  <div>Rating: {{rating}}</div>
-  <div>Food Grade: {{food_grade}}</div>
-</div>
+{{>header}}
+  <div class="restaurant">
+    <img class="logo" src="{{img}}" alt="{{name}}">
+      <h2>{{name}}</h2>
+        <div>Name: {{name}}</div>
+        <div>Location: {{location}}</div>
+        <div>Description: {{description}}</div>
+        <div>Rating: {{rating}}</div>
+        <div>Food Grade: {{food_grade}}</div>
+  </div>
+{{>footer}}
+
+
 {{!-- done --}}
 
 {{!-- For testing only: will display all restaurants from table as bullet points  --}}
