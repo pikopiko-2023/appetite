@@ -1,7 +1,11 @@
 export async function seed(knex) {
   await knex('users').insert([
-    { id: 99901, name: 'test user 1', email: 'test1@users.net' },
-    { id: 99902, name: 'test user 2', email: 'test2@users.net' },
-    { id: 99903, name: 'test user 3', email: 'test3@users.net' },
+    {
+      id: 99903,
+      name: 'Po',
+      about: "Po's favourite food is noodles",
+      email: 'popopo@users.net',
+      img: '/images/fake-user/Po.png',
+    },
   ])
 }

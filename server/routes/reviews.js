@@ -15,7 +15,6 @@ router.get('/:id/reviews', async (req, res) => {
       restaurant: restaurant,
       reviews: reviews,
     }
-
     res.render('review', { viewReviews })
   } catch (err) {
     res.status(500).send('DATABASE ERROR: ' + err.message)
