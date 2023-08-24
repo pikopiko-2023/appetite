@@ -1,14 +1,16 @@
 {{>header}}
 {{>navigation}}
-<div class="user">
-  <h1>{{user.name}}</h1>
-  <img class="logo" src="{{user.img}}" alt="{{user.name}}">
-  <div>About: {{user.about}}</div>
-  <div>Email: {{user.email}}</div>
+<div>
+  <div class="user">
+    <h1>{{user.name}}</h1>  
+      <img class="logo" src="{{user.img}}" alt="{{user.name}}">
+      <div>About: {{user.about}}</div>
+      <div>Email: {{user.email}}</div>
+  </div>  
 </div>
 <h2>All Reviews By User:</h2>
 {{#each reviews}}
-<div class="userReviews">
+<div class="user">
   <img class="logo" src="{{restaurantImage}}" alt="{{restaurantName}}">
   <h3>{{restaurantName}}</h3>
   <div>Rating: {{rating}}</div>

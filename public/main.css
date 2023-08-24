@@ -16,20 +16,22 @@ header {
   height: 250px;
 }
 
+h2 {
+  padding: 20px;
+  width: 50%;
+}
+
+/* CSS for Home page */
+
 .logo {
-  margin: 15px;
+  margin: 10px;
   width: 25vw;
   border: 1px solid black;
   box-shadow: 2px 2px 5px gray;
 }
 
-.user-logo {
-  max-width: 450px;
-  padding: 20px;
-}
-
 .logos {
-  padding-left: 22.5%;
+  padding-left: 23%;
   padding-right: 20%;
 }
 
@@ -41,10 +43,47 @@ header {
   background: linear-gradient(to bottom left, #ef8663 25%, #e8612f 80%);
 }
 
+/* CSS for userList.hbs */
+
+.user-logo {
+  max-width: 450px;
+  padding: 20px;
+}
+
 .about-user {
   padding: 20px;
   width: 50%;
 }
+
+/* CSS for user.hbs */
+
+.user {
+  padding: 20px;
+  width: 50%;
+}
+
+/* CSS for restaurant.hbs */
+
+.restaurant-info {
+  padding: 20px;
+  width: 50%;
+}
+
+/* CSS for review.hbs */
+
+.reviews {
+  padding: 20px;
+  width: 50%;
+}
+
+/* CSS for addReview */
+
+.addReview {
+  padding: 20px;
+  width: 50%;
+}
+
+/* CSS for footer */
 
 footer {
   bottom: 0;
