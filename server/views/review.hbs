@@ -1,4 +1,3 @@
-<div class="reviews">
   {{>header}}
   {{>navigation}}
   <div>
@@ -15,7 +14,13 @@
     <p>Rating: {{rating}}</p>
     <p>{{review}}</p>
     <div>
+      <div class="reviews">
+        <img class="logo" src="{{userImage}}" alt="{{userName}}">
+        <h3>{{userName}}  <a href="/users/{{userId}}">View Profile</a></h3>
+        <p>Rating: {{rating}}</p>
+        <p>{{review}}</p>
+      <div>
+    </div>
+  {{/each}}
   </div>
-{{/each}}
 {{>footer}}
-</div>
